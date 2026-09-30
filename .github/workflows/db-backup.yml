@@ -45,7 +45,7 @@ jobs:
 
           # pg_dump through gzip compression
           # Exclude internal Supabase schemas if you only want your application data:
-          pg_dump "${{ secrets.DATABASE_URL }}" \
+          /usr/lib/postgresql/17/bin/pg_dump "${{ secrets.DATABASE_URL }}" \
             --clean \
             --if-exists \
             --no-owner \
